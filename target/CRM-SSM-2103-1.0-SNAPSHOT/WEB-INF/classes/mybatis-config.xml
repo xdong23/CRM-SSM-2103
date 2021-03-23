@@ -5,10 +5,29 @@
 <configuration>
     <!--设置输出日志信息-->
     <settings>
+        <!--设置mybatis输出日志-->
         <setting name="logImpl" value="STDOUT_LOGGING"/>
         <!--下划线驼峰自动转换-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
+    <!--设置别名-->
+    <typeAliases>
+        <package name="com.dong.settings.bean"/>
+        <package name="com.dong.workbench.bean"/>
+    </typeAliases>
 
+    <mappers>
+        <!--1.一个mapper标签，指定一个文件的位置，从类路径开始的信息，target/clasess（类路径）
+           2.可以有多个mapper标签 ————》<mapper resource="com/dong/dao/StudentDAO.xml"/>-->
+
+        <!--name :是包名,这个包中的所有mapper.xml一次都能加载
+        使用package的要求: 1. mapper文件名称和dao接口名必须完全一样,包括大小写
+                          2. mapper文件和dao接口必须在同一目录
+         -->
+        <!--<package name="com.dong.dao"/>-->
+        <!--name: 包名,这个包中的所有mapper.xml一次都能加载-->
+        <package name="com.dong.settings.dao"/>
+        <package name="com.dong.workbench.dao"/>
+    </mappers>
 
 </configuration>

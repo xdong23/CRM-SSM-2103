@@ -1,4 +1,4 @@
-package com.dong.bean;
+package com.dong.settings.bean;
 
 /**
  * @author daDong
