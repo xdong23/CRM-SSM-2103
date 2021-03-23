@@ -64,4 +64,19 @@
     </filter-mapping>-->
 
 
+    <!--配置spring框架中的监听器,完成容器对象的创建-->
+    <context-param>
+        <!--contextConfigLocation: 表示配置文件的路径-->
+        <param-name>contextConfigLocation</param-name>
+        <!--自定义配置文件的路径-->
+        <param-value>classpath:applicationContext.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!--配置监听器-->
+   <!-- <listener>
+        <listener-class>com.dong.web.listener.SysInitListener</listener-class>
+    </listener>-->
 </web-app>
