@@ -22,8 +22,8 @@
         <property name="bookMapper" ref="bookMapper" />
     </bean>-->
 
-    <!--3.声明式事务配置       DataSourceTransactionManager-->
-    <bean id="transactionManager" class="DataSourceTransactionManager">
+    <!--3.声明式事务配置   org.springframework.jdbc.datasource.DataSourceTransactionManager-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <!--注入数据源-->
         <property name="dataSource" ref="dataSource"/>
     </bean>
